@@ -1,0 +1,23 @@
+{
+    "name": "Bridge",
+    "references": [
+        "GUID:c4b3bd7744e74a74bbdb23b4ddae49e0",
+        "GUID:b15a3e9b7a0f44443951f790dbf48646",
+        "GUID:20751fc253af5b64d8e09d39fceb52b9",
+        "GUID:9b289792e4b1b41de82a83c0e5f5ee6c",
+        "GUID:f1359a96f562742bd987cfcc1c6c9aa7",
+        "GUID:9069ac25d95ca17448a247f3bb1c769f",
+        "GUID:a1bcf09662ac54422ad2098e60e912f7",
+        "GUID:f6e4e8eb82afa466babdd1af14389049",
+        "GUID:666d7b7b4f3ad1c42a375b9dee118475"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

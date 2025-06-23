@@ -1,0 +1,16 @@
+﻿using ApiTests;
+using Bridge.Models.ClientServer.Level.Full;
+using Newtonsoft.Json;
+using UnityEngine;
+
+internal sealed class CreateLevelFromJsonString : AuthorizedUserApiTestBase
+{
+    [SerializeField] private string _level =
+        "{\"Id\":0,\"RemixedFromLevelId\":null,\"SchoolTaskId\":null,\"Description\":\"\",\"ContainsCopyrightedContent\":false,\"LevelTypeId\":2,\"Event\":[{\"TargetCharacterSequenceNumber\":0,\"CharacterSpawnPositionId\":16534,\"CharacterSpawnPositionFormationId\":1,\"Length\":3983,\"TemplateId\":null,\"LevelSequence\":1,\"Id\":0,\"HasActualThumbnail\":true,\"Files\":[{\"FilePath\":\"/Users/serhiihorun/Library/ApplicationSupport/FriendFactory/Frever/EventThumbnails/-8__512x512.png\",\"State\":1,\"File\":1,\"Resolution\":\"512x512\",\"Source\":{\"UploadId\":\"9ec150bc-77b7-4b63-a5bc-f43fa44a93ea\",\"CopyFrom\":null},\"Version\":null,\"Platform\":null,\"UnityVersion\":null,\"Extension\":5},{\"FilePath\":\"/Users/serhiihorun/Library/ApplicationSupport/FriendFactory/Frever/EventThumbnails/-8__128x128.png\",\"State\":1,\"File\":1,\"Resolution\":\"128x128\",\"Source\":{\"UploadId\":\"459b2b90-58d7-44be-b35e-73768e3d58e3\",\"CopyFrom\":null},\"Version\":null,\"Platform\":null,\"UnityVersion\":null,\"Extension\":5}],\"CharacterController\":[{\"Id\":0,\"CharacterId\":16884,\"ControllerSequenceNumber\":0,\"OutfitId\":null,\"CharacterSpawnPositionId\":16534,\"BodyAnimation\":{\"Id\":0,\"BodyAnimationId\":66,\"ActivationCue\":2692,\"EndCue\":6675},\"FaceVoice\":{\"Id\":0,\"VoiceFilterId\":7,\"VoiceSoundVolume\":0,\"VoiceTrack\":null,\"FaceAnimation\":null}}],\"CameraController\":{\"Id\":0,\"CameraAnimationTemplateId\":42,\"StartFocusDistance\":0,\"EndFocusDistance\":0,\"CameraNoiseSettingsIndex\":0,\"TemplateSpeed\":0,\"FollowAll\":false,\"LookAtIndex\":null,\"AnimationRegenerationRequired\":false,\"CameraAnimation\":{\"Id\":0,\"Files\":[{\"FilePath\":null,\"State\":4,\"File\":0,\"Resolution\":null,\"Source\":{\"UploadId\":null,\"CopyFrom\":{\"Id\":343132,\"Version\":\"20231127T210109Ub6fab36c8b0c4af49e34a9bd4832e762\"}},\"Version\":null,\"Platform\":null,\"UnityVersion\":null,\"Extension\":6}],\"FirstFrame\":null,\"LastFrame\":null,\"CameraAnimationTemplateId\":42},\"RegenerationStartFrame\":null},\"SetLocationController\":{\"Id\":0,\"SetLocationId\":1357,\"ActivationCue\":0,\"EndCue\":4866,\"TimeOfDay\":null,\"VideoActivationCue\":null,\"VideoEndCue\":null,\"VideoSoundVolume\":0,\"TimelapseSpeed\":null,\"Photo\":{\"Id\":0,\"ResolutionWidth\":0,\"ResolutionHeight\":0,\"Files\":[{\"FilePath\":\"/Users/serhiihorun/Library/ApplicationSupport/FriendFactory/Frever/Cache/TempFiles/2bfcef4204664b2f9eceecc6e1b3405c.png\",\"State\":1,\"File\":0,\"Resolution\":null,\"Source\":{\"UploadId\":\"18b08621-3e17-4ef2-a1a0-3f66f3d08e30\",\"CopyFrom\":null},\"Version\":null,\"Platform\":null,\"UnityVersion\":null,\"Extension\":5}]},\"VideoClip\":null,\"PictureInPictureSettings\":{\"Position\":{\"X\":0.25,\"Y\":0.35},\"Scale\":1.35000026,\"Rotation\":0.0},\"SetLocationBackgroundId\":null},\"VfxController\":null,\"CameraFilterController\":null,\"MusicController\":null,\"Caption\":null}]}";
+    
+    protected override async void RunTestAsync()
+    {
+        var level = JsonConvert.DeserializeObject<LevelFullInfo>(_level);
+        var resp = await Bridge.SaveLevel(level);
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "com.friendfactory.bridge",
+  "displayName": "Bridge",
+  "version": "1.8.313",
+  "unity": "2022.3",
+  "description": "Provides the interfaces for communication with Frever server",
+  "type": "submodule",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "2.0.0"
+  }
+}
