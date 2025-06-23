@@ -1,0 +1,17 @@
+{
+    "name": "Bridge.Editor",
+    "references": [
+        "GUID:032147b428afd7740a7bb5297557ba4d"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

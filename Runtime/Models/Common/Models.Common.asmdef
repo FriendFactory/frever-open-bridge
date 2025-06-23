@@ -1,0 +1,15 @@
+{
+    "name": "Models.Common",
+    "references": [
+        "GUID:9b289792e4b1b41de82a83c0e5f5ee6c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
